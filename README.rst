@@ -1,4 +1,4 @@
-F5 Agility Lab Template
+F5 Agility 2018 - BIG-IQ 6.0 - App Owners Unite
 =======================
 
 Introduction
