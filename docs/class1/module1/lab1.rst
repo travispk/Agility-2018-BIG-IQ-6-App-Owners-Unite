@@ -1,49 +1,87 @@
-Lab – Download the |bip| |ve| Image
------------------------------------
+Lab 1: Creation of each persona in BIG-IQ
+-----------------------------------------
+.. note:: Marco, Paula, Paul and Larry are already created in the blueprint,so only the **david** user needs to be created.
 
-.. TODO:: Needs lab description
+We will be using 4 main personas for this lab:
 
-This lab will teach you how to download the |bip| |ve| image to your system.
+1. **Marco**: Full Administrator
+2. **Larry**: Security Manager
+3. **Paula**: Application Manager VMware
+4. **Paul**: Application Manager AWS
+5. **David**: Super-NetOps
 
-Task – Open a Web Browser
-~~~~~~~~~~~~~~~~~~~~~~~~~
+**Marco** will have full access to BIG-IQ. He knows a lot about F5 products (BIG-IQ/BIG-IP).
+He will provide the access to David, Larry and Paula. He will also manage the Service Scaling Group (SSG)
+and application templates.
 
-.. TODO:: Needs task description
+**Larry** will manage the Web Application Firewall (WAF) policies. He will work with Paula's team
+to define the necessary security policies for each applications.
+Ensure teams comply with security policies, industry rules and regulations, and best practices.
+Keeping up to date on threats, determining their potential impact, and mitigating the risks.
 
-In this task you will open a web browser and navigate to the |f5| Downloads
-site.
+**Paula** and **Paul** will manage the application deployments, monitor levels of app incidents, building solutions to address identified, prioritized business problems in a timely manner.
+Maximizing value of app through capabilities design, adoption, and usage.
+Ensuring that the app fits within the rest of the organization’s app portfolio strategy.
 
-.. NOTE:: An account is required to download software.  You can create one at
-   https://login.f5.com/resource/registerEmail.jsp
+**David** will try automating whenever possible, to enable efficiency and ability to solve problems at scale.
+Automate common network patterns that the other teams can consume.
+Automate existing environment management and troubleshooting tasks.
 
-Follow these steps to complete this task:
+Connect to your BIG-IQ as **admin** and go to : *System* > *Users Management* > *Users*
+and verify each user & role below and change where needed.
 
-#. Open your web browser
-#. Navigate to https://downloads.f5.com
-#. Login with your username and password.
-#. After logging in you should see the following window:
+**1. Marco: Full Administrator**
 
-   |image1|
+- *Auth Provider* = Radius
+- *User Name* = marco
+- *Full Name* = Full Administrator
+- (*Password stored in Radius server* = marco)
+- *Role* = Administrator Role
 
-Task – Download the Image
-~~~~~~~~~~~~~~~~~~~~~~~~~
+**2. Larry: Application Security Manager**
 
-.. TODO:: Needs task description
+- *Auth Provider* = Radius
+- *User Name* = larry
+- *Full Name* = Security Manager
+- (*Password stored in Radius server* = larry)
+- *Role* = Security Manager
 
-In this task we will download the |f5| |bip| |ve| image to your system
+**3. Paula: Application Manager VMware**
 
-Follow these steps to complete this task:
+- *Auth Provider* = Radius
+- *User Name* = paula
+- *Full Name* = Application Manager
+- (*Password stored in Radius server* = paula)
+- *Role* = Application Creator VMware (custom role with ALL default templates except AWS)
 
-#. Click the 'Find a Download' button.
+**4. Paul: Application Manager AWS**
 
-   .. image:: /_static/image002.png
+- *Auth Provider* = Radius
+- *User Name* = paul
+- *Full Name* = Application Manager
+- (*Password stored in Radius server* = paul)
+- *Role* = Application Creator AWS (custom role with AWS default templates only)
 
-#. Click the link that contains the |bip| TMOS software version you would like
-   to download.
+**5. David: Super-NetOps**
 
-   .. IMPORTANT:: Be sure to click a link that has "\ |ve|" in the name
+Click on *Add*
 
-#. Find the image appropriate for your hypervisor
-#. Download the image and save it to you local system
+- *Auth Provider* = local
+- *User Name* = david
+- *Full Name* = Super-NetOps
+- *Password* = david
+- *Role* = Application Creator VMware (custom role with ALL default templates)
 
-.. |image1| image:: /_static/image001.png
+Click on *Save & Close*`
+
+.. warning:: Only local users are supported to execute Ansible playbook
+
+.. image:: ../pictures/module1/img_module1_lab2_1.png
+  :align: center
+  :scale: 50%
+
+Application Creator VMware custom role:
+
+.. image:: ../pictures/module1/img_module1_lab2_2.png
+  :align: center
+  :scale: 50%

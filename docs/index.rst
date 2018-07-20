@@ -1,10 +1,10 @@
-F5 Agility Labs - Index
-=======================
+F5 Cloud Edition Lab - Index
+============================
 
 Welcome
 -------
 
-Welcome to the |classbold| lab at F5 Agility |year|
+Welcome to the |classbold| lab - |year|
 
 |repoinfo|
 
@@ -14,7 +14,4 @@ Welcome to the |classbold| lab at F5 Agility |year|
    :caption: Contents:
    :glob:
 
-   intro*
    class*/class*
-   examples
-   markdown

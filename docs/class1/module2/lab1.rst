@@ -1,48 +1,26 @@
-Lab – Install a |f5| |bip| Appliance
-------------------------------------
+Lab 2.1: Built-in templates
+---------------------------
+BIG-IQ v6.0 will have the default templates below built-in. These default templates cannot be modified but they can be cloned.
+They can be used to deploy various type of applications. These default templates are only displayed after BIG-IQ is managing a BIG-IP device.
 
-.. TODO:: Needs lab description
+- ``Default-AWS-f5-fastHTTP-lb-template``: For load balancing an HTTP-based application, speeding up connections and reducing the number of connections to the back-end server. (only for AWS PerAppVE License)
+- ``Default-AWS-f5-HTTPS-WAF-lb-template``: For load balancing an HTTPS application on port 443 with a Web Application Firewall using an ASM Rapid Deployment policy. (only for AWS PerAppVE License)
+- ``Default-f5-FastL4-TCP-lb-template``: For load balancing a TCP-based application with a FastL4 profile.
+- ``Default-f5-FastL4-UDP-lb-template``: For load balancing a UDP-based application with a FastL4 profile.
+- ``Default-f5-HTTP-lb-template``: For load balancing an HTTP application on port 80.
+- ``Default-f5-fastHTTP-lb-template``: For load balancing an HTTP-based application, speeding up connections and reducing the number of connections to the back-end server.
+- ``Default-f5-HTTPS-WAF-lb-template``: For load balancing an HTTPS application on port 443 with a Web Application Firewall using an ASM Rapid Deployment policy.
+- ``Default-f5-HTTPS-offload-lb-template``: For load balancing an HTTPS application on port 443 with SSL offloading on BIG-IP.
 
-In this lab we will unpack and install the |bip| Appliance into a rack in your
-datacenter.
+.. warning:: Templates with virtual servers without a HTTP profiles can not be depoyed to a Service Scaling Group
 
-Task – Unpack the |bip| Appliance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect as **marco**, go to *Applications* > *SERVICE CATALOG*:
 
-.. TODO:: Needs task description
+Look through the different default templates.
 
-In this task you will remove the |bip| Appliance from it's packaging.
+.. image:: ../pictures/module2/img_module2_lab1_1.png
+  :align: center
 
-Follow these steps to complete this task:
+|
 
-#. Open the box with an extremely sharp knife or cutter
-
-   .. DANGER:: Knives are sharp and can cut you.  Please be careful.
-
-      |knivessharp|
-
-#. Carefully remove the |bip| from it's packaging
-#. Set it down on a stable surface
-
-Task – Install the |bip| Appliance in a Datacenter Rack
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. TODO:: Needs task description
-
-In this task you will install the |bip| Appliance into a Rack.  You will need
-the following tools:
-
-- Phillips Screwdriver
-- Hammer
-- Crowbar
-
-.. CAUTION:: Appliances can be heavy.  Please follow all applicable safety
-   guidelines.
-
-Follow these steps to complete this task:
-
-#. Install the rackmount rails onto the appliance using the included hardware
-#. Lift the appliance into place
-#. Complete installation by using your tools to secure the appliance.
-
-.. |knivessharp| image:: http://theinkkitchen.com/wp-content/uploads/2014/08/Screenshot-2014-07-30-12.22.44.png
+.. warning:: There will be no default AFM or DoS policies delivered in BIG-IQ 6.0. **Larry** will need to manually define them and link them to the custom templates.

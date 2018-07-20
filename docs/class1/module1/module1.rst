@@ -1,10 +1,9 @@
-Module – Installing a BIG-IP Virtual Edition
-=============================================
+Module 1: Creating the personas (users with roles)
+==================================================
 
-.. TODO:: Needs module description
+In this module, we will learn about the different personas used in the Cloud Edition workflows.
 
-In this module you will learn how to install a |f5| |bip| |ve| into your
-environment.
+We will use these personas through out the lab. We are not trying to demonstrate full RBAC feature, as this is not the focus.
 
 .. toctree::
    :maxdepth: 1
