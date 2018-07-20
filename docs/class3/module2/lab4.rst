@@ -1,9 +1,9 @@
 Lab 2.4: Miscellaneous
 ----------------------
-Connect as **paula**.
+Connect as **paula** with password of **paula**
 Open ``site42.example.com``.
 
-1. **Page Load Time** is dependent on CSPM (Client side Perf Monitoring javascript injection).
+**Page Load Time** is dependent on CSPM (Client side Perf Monitoring javascript injection).
 
 An HTTP response is eligible for CSPM injection under the following conditions:
 
@@ -60,7 +60,7 @@ Go back on the BIG-IQ, expand the right-edge of the analytics pane and check you
 
 |
 
-2. Differences when Enhanced Analytics are enabled or disable on the HTTP Analytics profile
+Differences when Enhanced Analytics are enabled or disable on the HTTP Analytics profile
 Login to BIG-IP, go to ``SEA-vBIGIP01.termmarc.com`` BIG-IP, Local Traffic > Profiles > Analytics > HTTP Analytics.
 
 .. image:: ../pictures/module2/img_module2_lab4_4.png
@@ -75,7 +75,7 @@ Login to BIG-IP, go to ``SEA-vBIGIP01.termmarc.com`` BIG-IP, Local Traffic > Pro
 
 |
 
-3. Compare two or more items in the detailed right hand panel. i.e. compare pool members and URLs.
+Compare two or more items in the detailed right hand panel. i.e. compare pool members and URLs.
 
 .. image:: ../pictures/module2/img_module2_lab4_6.png
   :align: center
