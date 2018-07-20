@@ -1,6 +1,6 @@
 Lab 2.2: Create custom security policies & Application Service Template
 -----------------------------------------------------------------------
-Connect to the Big-IQ as **larry/larry**
+Connect to the Big-IQ as **larry** with password of **larry**
 
 1. Create the custom ASM policy, go to *Configuration* > *SECURITY* > *Web Application Security* > *policies*.
 
