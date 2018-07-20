@@ -1,6 +1,6 @@
 Lab 1.1: General Views and Configuration Applications
 -----------------------------------------------------
-Connect as **paula**.
+Connect as **paula** with the password of **paula**
 
 The screen lists all of your applications and current summary data about health, traffic performance and security. Use this screen to create, delete, deploy and oversee all of your applications.
 
