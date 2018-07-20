@@ -1,6 +1,6 @@
 Lab 2.2: Create custom security policies & Application Service Template
 -----------------------------------------------------------------------
-Connect as **larry**
+Connect to the Big-IQ as **larry** with password of **larry**
 
 1. Create the custom ASM policy, go to *Configuration* > *SECURITY* > *Web Application Security* > *policies*.
 
@@ -54,7 +54,7 @@ Click Save & Close.
 
 |
 
-Connect as **marco**
+Connect to the Big-IQ as **marco** with password of **marco**
 
 1. Create a Clone of the *Default-f5-HTTPS-WAF-lb-template* policy, go to *Applications* > *SERVICE CATALOG*, and click on *Clone*.
 Enter the name of your cloned template: ``f5-HTTPS-WAF-lb-template-custom1``
