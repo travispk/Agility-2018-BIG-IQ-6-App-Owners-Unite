@@ -14,9 +14,9 @@ When you define the application, you can omit or include these objects. Paramete
 as not visible are included using the default values specified in the application template.
 This allows you to maintain a consistent environment. Parameters that you define as editable are visible and can be revised.
 
-Connect as **marco** to create a Custom Service Template, go to *Applications* > *SERVICE CATALOG*, click on *Create*.
+Connect as **marco** with password of **marco**. Create a Custom Service Template, go to *Applications* > *SERVICE CATALOG*, click on *Create*.
 
-1. In the Name field, type in a name for the application template you are creating.
+In the Name field, type in a name for the application template you are creating.
 In the Description field (optional), type in a brief description for the application template you are creating to help identify it when you want to use it later.
 
 - Name: ``f5-HTTP-lb-custom-template``
@@ -28,13 +28,13 @@ In the Description field (optional), type in a brief description for the applica
 
 |
 
-2. Save the template, click *Save*
+Save the template, click *Save*
 
-3. Now, define the default objects for this template.
+Now, define the default objects for this template.
 You can either create these objects manually, or you can import objects that already exist on this BIG-IQ.
 On the left, under Properties, expand Local Traffic and then select the object type you want to define.
 
-4. To add a default nodes, you would expand Local Traffic, and then click Nodes.
+To add a default nodes, you would expand Local Traffic, and then click Nodes.
 Click *Create*. The screen you use to define the selected object type (for example New Node) displays.
 
 .. image:: ../pictures/module4/img_module4_lab1_2.png
@@ -69,9 +69,9 @@ Repeat the same with the 2nd node:
 
 If you want applications created with this template to be able to include more than one copy of the object you are adding, select Enabled for Allow Multiple Instances.
 
-5. Save the template, click *Save*
+Save the template, click *Save*
 
-6. To add a default pool, you would expand Local Traffic, and then click Pools.
+To add a default pool, you would expand Local Traffic, and then click Pools.
 Click *Create*. The screen you use to define the selected object type (for example New Pool) displays.
 
 .. image:: ../pictures/module4/img_module4_lab1_5.png
@@ -92,7 +92,7 @@ Create your pool with the following parameters:
 
 |
 
-7. Save the template, click *Save*
+Save the template, click *Save*
 
 Add the nodes previously created to the pool template:
 
@@ -128,9 +128,9 @@ Once both nodes are added to the Pool template, you should see both nodes attach
 
 |
 
-8. Save the template, click *Save & Close*
+Save the template, click *Save & Close*
 
-9. To add a default virtual server, you would expand Local Traffic, and then click Virtual Servers.
+To add a default virtual server, you would expand Local Traffic, and then click Virtual Servers.
 Click *Create*. The screen you use to define the selected object type (for example New Virtual Server) displays.
 
 .. image:: ../pictures/module4/img_module4_lab1_10.png
@@ -201,7 +201,7 @@ When you finish specifying parameters for this object, click Save & Close.
 BIG-IQ adds the object you defined to the list of objects in this template.
 When you finish adding an object to a template, you can use it to create an application.
 
-10. In order to allow Paula to use the custom application template, go to : *System* > *Role Management* > *Roles*
+In order to allow Paula to use the custom application template, go to : *System* > *Role Management* > *Roles*
 and select *CUSTOM ROLES* > *Application Roles* > *Application Creator VMware* role (already assigned to Paula). Select the Template *f5-HTTP-lb-custom-template*, drag it to the right.
 
 .. image::  ../pictures/module4/img_module4_lab1_14.png
