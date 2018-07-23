@@ -1,4 +1,4 @@
-Class 3:  BIG-IQ Analytics
+Class 2:  BIG-IQ Analytics
 ==========================
 
 .. note:: On this page there is no actions to be done here regarding the lab itself
