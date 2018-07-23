@@ -1,8 +1,8 @@
 Lab 2.3: Troubleshooting Security
 ---------------------------------
-Connect as **larry**
+Connect as **larry** with password of **larry**
 
-1. Larry disable the Web Application Security for ``templates-default`` ASM Policy.
+Disable the Web Application Security for ``templates-default`` ASM Policy.
 
 Go to Configuration > SECURITY > Web Application Security > Policies, select ``templates-default`` ASM Policy.
 
@@ -55,7 +55,7 @@ Go to POLICY BUILDING > Settings and check **Automatic** is set for the Learning
 
 |
 
-2. Update the Enforcement Mode to ``Blocking``
+Update the Enforcement Mode to ``Blocking``
 
 Go to POLICY PROPERTIES > General Properties
 
@@ -67,11 +67,11 @@ Go to POLICY PROPERTIES > General Properties
 
 Save and Close.
 
-Connect as **paula**
+Connect as **paula** with password of **paula**
 
 Select ``site36.example.com``
 
-1. Paula enforce the policy: APPLICATION SERVICES > Security > CONFIGURATION tab > click on ``Start Blocking``
+Paula enforce the policy: APPLICATION SERVICES > Security > CONFIGURATION tab > click on ``Start Blocking``
 
 .. image:: ../pictures/module2/img_module2_lab3_3.png
   :align: center
@@ -85,14 +85,12 @@ Select ``site36.example.com``
   :align: center
   :scale: 50%
 
-2. Connect on the *Ubuntu Lamp Server* server and launch the following command:
+Connect on the *Ubuntu Lamp Server* server and launch the following command:
 
 ``# /home/f5/scripts/generate_bad_traffic.sh``
 
-3. Check the various Security Analytics: Illegal Transactions, All Transactions and Violations.
+Check the various Security Analytics: Illegal Transactions, All Transactions and Violations.
 
 .. image:: ../pictures/module2/img_module2_lab3_4.png
   :align: center
   :scale: 50%
-
-4. Stop the bad traffic script, connect on the *Ubuntu Lamp Server* server and ``CTRL+C``.

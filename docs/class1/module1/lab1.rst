@@ -27,7 +27,7 @@ Ensuring that the app fits within the rest of the organization’s app portfolio
 Automate common network patterns that the other teams can consume.
 Automate existing environment management and troubleshooting tasks.
 
-Connect to your BIG-IQ as **admin** and go to : *System* > *Users Management* > *Users*
+Connect to your BIG-IQ as **admin/admin** and go to : *System* > *Users Management* > *Users*
 and verify each user & role below and change where needed.
 
 **1. Marco: Full Administrator**
@@ -77,11 +77,5 @@ Click on *Save & Close*`
 .. warning:: Only local users are supported to execute Ansible playbook
 
 .. image:: ../pictures/module1/img_module1_lab2_1.png
-  :align: center
-  :scale: 50%
-
-Application Creator VMware custom role:
-
-.. image:: ../pictures/module1/img_module1_lab2_2.png
   :align: center
   :scale: 50%

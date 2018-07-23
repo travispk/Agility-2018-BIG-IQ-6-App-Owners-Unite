@@ -14,7 +14,7 @@ They can be used to deploy various type of applications. These default templates
 
 .. warning:: Templates with virtual servers without a HTTP profiles can not be depoyed to a Service Scaling Group
 
-Connect as **marco**, go to *Applications* > *SERVICE CATALOG*:
+Connect as **marco** with the password of **marco** to the Big-IQ. Once logged in, go to *Applications* > *SERVICE CATALOG*:
 
 Look through the different default templates.
 
