@@ -111,4 +111,4 @@ Paula can update Application Health Alert Rules by clicking on the Health Icon o
 
 |
 
-**Optional:** Login to the BIG-IP (SEA-vBIGIP01) with username: **admin** and password: **admin** and view the Virtual Servers you just deployed using an application template.
+**Optional:** Login to the BIG-IP (SEA-vBIGIP01) with username: **admin** and password: **agility** and view the Virtual Servers you just deployed using an application template.

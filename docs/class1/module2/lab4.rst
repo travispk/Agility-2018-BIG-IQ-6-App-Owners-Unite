@@ -69,7 +69,7 @@ Enforce the policy APPLICATION SERVICES > Security > CONFIGURATION tab > click o
 
 **Let's generate some bad traffic**
 
-Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **default**
+Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **agility**
 
 Execute the following script:
 

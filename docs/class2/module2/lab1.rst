@@ -23,7 +23,7 @@ Expand the right-edge of the analytics pane to get the response code filter. Not
 
 **Generate 404 errors on the web application**
 
-Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **default**
+Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **agility**
 
 Execute this command::
 

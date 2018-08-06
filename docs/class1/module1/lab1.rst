@@ -28,7 +28,7 @@ Automate existing environment management and troubleshooting tasks.
 
 ``****TASKS****``
 
-#. Connect to your **BIG-IQ (Named: BIG-IQ CM1)** as Username: **admin** and Password: **admin**
+#. Connect to your **BIG-IQ (Named: BIG-IQ CM1)** as Username: **marco** and Password: **marco**
 #. Go to : **System** > **Users Management** > **Users**
 #. Verify each user & role below.
 

@@ -14,7 +14,7 @@ The following parameters are filled in the playbook ``create_http_app.yaml``.
 - Service Port: ``80``
 - Servers (Pool Member): ``10.1.20.122``
 
-Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **default**
+Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **agility**
 
 Execute the playbook::
 
