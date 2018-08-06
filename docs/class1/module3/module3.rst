@@ -6,8 +6,6 @@ BIG-IQ 6.0 will offer the below Ansible module available in Ansible 2.6 (for inf
 
 .. _experimental F5 Modules: http://clouddocs.f5.com/products/orchestration/ansible/devel/usage/installing-modules.html
 
-.. warning:: Ansible 2.6 only supports App deployment on VMware environment.
-
 - Create and Delete Application from Default-f5-HTTP-lb-template: **bigiq_application_http**
 - Create and Delete Application from Default-f5-HTTPS-offload-lb-template: **bigiq_application_https_offload**
 - Create and Delete Application from Default-f5-HTTPS-WAF-lb-template: **bigiq_application_https_waf**
@@ -16,6 +14,7 @@ BIG-IQ 6.0 will offer the below Ansible module available in Ansible 2.6 (for inf
 - Create and Delete Application from Default-f5-FastL4-UDP-lb-template: **bigiq_application_fastl4_udp**
 
  More information on all `F5 Ansible Modules`_.
+
 .. _F5 Ansible Modules: https://clouddocs.f5.com/products/orchestration/ansible/devel/modules/list_of_all_modules.html
 
 In this module, we will learn how to see create and delete an application using Ansible Playbook, also look at an example of straight API payload from BIG-IQ UI.
@@ -25,3 +24,4 @@ In this module, we will learn how to see create and delete an application using 
    :glob:
 
    lab*
+

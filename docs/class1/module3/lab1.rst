@@ -1,5 +1,5 @@
 Lab 3.1: Create Application via API (Ansible)
---------------------------------------------
+----------------------------------------------
 In this lab, we are going to deploy a basic HTTP application using Ansible.
 
 .. warning :: **david** is used to execute Ansible playbooks, make sure it has the correct permission and is a LOCAL user (c.f. Class 1 Module 1)
@@ -14,15 +14,17 @@ The following parameters are filled in the playbook ``create_http_app.yaml``.
 - Service Port: ``80``
 - Servers (Pool Member): ``10.1.20.122``
 
-Open a SSH session to *Ubuntu Lamp Server* in UDF.
+Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **default**
 
 Execute the playbook::
 
     # cd /home/f5/f5-ansible-demo
     # ansible-playbook -i notahost, create_http_app.yaml -vvvv
 
+    (This can take a minute or two)
+
 .. warning :: If the ansible playbook run successfully but the app doesn't show up, please, review david's role.
 
 .. note :: If you prefer not to wait until the app is created, you can switch the variable ``wait`` to ``no`` in the playbook.
 
-Connect as **david** (select Auth Provider local) and check on BIG-IQ the application has been correctly created.
+Connect as **david** (select **Auth Provider** ``local``) and check on BIG-IQ the application has been correctly created.

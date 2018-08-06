@@ -1,6 +1,6 @@
 Lab 1.1: General Views and Configuration Applications
 -----------------------------------------------------
-Connect as **paula** with the password of **paula**
+Logut of BIG-IQ and Login as **paula** with the password of **paula**
 
 The screen lists all of your applications and current summary data about health, traffic performance and security. Use this screen to create, delete, deploy and oversee all of your applications.
 
@@ -13,21 +13,15 @@ Click the elements in this area to filter or sort the application list.
 
 Use one of the screen's filter and sort settings to isolate an application of interest, based on summary data or active alerts.
 
+(Applications and data in the screenshots below may appear different then what you see)
+
 .. image:: ../pictures/module1/img_module1_lab1_1.png
   :align: center
   :scale: 50%
 
 |
 
-Filter on **Not Protected** Applications:
-
-.. image:: ../pictures/module1/img_module1_lab1_2.png
-  :align: center
-  :scale: 50%
-
-|
-
-Select an application name to redirect you to a more detailed dashboard.
+Select ``site40.example.com`` to view a more detailed dashboard.
 
 This screen displays the current health, traffic performance, security, and configuration details for an application.
 Use this screen to detect application trends, to identify issues that can affect performance, and to adjust application configuration settings.
@@ -47,7 +41,13 @@ The Health area indicates the application's health status.
 - The Alert History area lists the application's five most recent alerts.
 - The Active Alerts area lists the application's ongoing and most severe alerts.
 
-Click the icon to view, or edit, the application health alert rules.
+Click on the **HEALTH** icon to view, or edit, the application health alert rules.
+
+.. image:: ../pictures/module1/img_module1_lab1_9.png
+  :align: center
+  :scale: 100%
+
+|
 
 .. image:: ../pictures/module1/img_module1_lab1_4.png
   :align: center
@@ -61,6 +61,8 @@ network and device configuration, F5 application services, and server configurat
   :scale: 50%
 
 |
+
+Click **Cancel** Button (bottom right)
 
 **Analytics Tab**
 
@@ -100,9 +102,11 @@ Take the time to navigate in all the different charts.
 
 **Configuration Tab**
 
-Click CONFIGURATION to view and evaluate the settings for application properties. The Application owner can easily update the BIG-IP configuration (Virtual Server, Node, etc..).
+Click CONFIGURATION to view and evaluate the settings for application properties. The Application owner can easily update the BIG-IP configuration (Virtual Server, Pool Members, etc..).
 
-Take the time to navigate in all the different menu.
+Take the time to explore all the different menus and analytics available to you and your application owners.
+
+See a poor performing pool member?  Let your app owners have control to mark it down.
 
 .. image:: ../pictures/module1/img_module1_lab1_8.png
   :align: center

@@ -1,6 +1,13 @@
 Lab 2.3: Create Application
 ---------------------------
-Connect as **paula** with a password of **paula**. To create a new application,  click on *Create*, and select the template previously created ``f5-HTTPS-WAF-lb-template-custom1``.
+
+**Create a new application**
+
+#. Logout of **BIG-IQ** (top right corner) 
+#. Login as **paula** with password of **paula**
+#. Navigate to **Applications** >> **APPLICATIONS**
+#. Click on **Create** button
+#. Select the template previously created **f5-HTTPS-WAF-lb-template-custom1**
 
 Type in a Name for the application you are creating.
 
@@ -10,13 +17,15 @@ To help identify this application when you want to use it later, in the Descript
 
 - Description: ``My First Application on F5 Cloud Edition``
 
-Type  the domain of your application (then the ASM policy will always be transparent for this domain)
+Type  the domain of your application
 
 - Domain Names: ``site18.example.com``
 
 For Device, select the name of the device you want to deploy this application to. (if the HTTP statistics are not enabled, they can be enabled later on after the application is deployed)
 
-- BIG-IP: Select ``SEA-vBIGIP01.termmarc.com`` and check ``Collect HTTP Statistics``
+- BIG-IP: Select ``SEA-vBIGIP01.termmarc.com``
+
+6. Select the checkbox **Collect HTTP Statistics**
 
 .. image:: ../pictures/module2/img_module2_lab3_1.png
   :align: center
@@ -51,8 +60,8 @@ It is good practice to type the Prefix that you want the system to use to make c
 
 |
 
-Then Click on Create (bottom right of the window).
-The Application is deployed.
+Then Click on **Create** (bottom right).
+The Application configuration will then deploy to the BIG-IP.  This will take a few minutes.
 
 .. image:: ../pictures/module2/img_module2_lab3_3.png
   :align: center
@@ -60,9 +69,7 @@ The Application is deployed.
 
 |
 
-.. note:: In case the Application fails, connect as **Marco** and go to Applications > Application Deployments to have more details on the failure. You try retry in case of failure.
-
-.. note:: You can tail the logs: /var/log/restjavad.0.log
+.. note:: In case the Application fails, connect as **Marco** and go to **Applications** >> **Application Deployments** to have more details on the failure. You try retry in case of failure.
 
 In Paula's Dashboard, she can see her Application.
 
@@ -80,7 +87,7 @@ Click on the Application and check the details (alarms, security enabled, config
 
 |
 
-Click on Traffic Management > Configuration
+Click on **Traffic Management** >> **Configuration**
 
 .. image:: ../pictures/module2/img_module2_lab3_6.png
   :align: center
@@ -88,7 +95,7 @@ Click on Traffic Management > Configuration
 
 |
 
-.. note:: A traffic generator located on the *Ubuntu Lamp Server* server, is sending good traffic every minute to the virtual servers.
+.. note:: A traffic generator located on the *Ubuntu Lamp Server* server, is sending traffic every minute to the virtual servers.
 
 Paula can update Application Health Alert Rules by clicking on the Health Icon on the top left of the Application Dashboard.
 
@@ -101,3 +108,7 @@ Paula can update Application Health Alert Rules by clicking on the Health Icon o
 .. image:: ../pictures/module2/img_module2_lab3_8.png
   :align: center
   :scale: 50%
+
+|
+
+**Optional:** Login to the BIG-IP (SEA-vBIGIP01) with username: **admin** and password: **admin** and view the Virtual Servers you just deployed using an application template.

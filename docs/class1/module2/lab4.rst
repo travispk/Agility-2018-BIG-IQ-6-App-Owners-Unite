@@ -1,11 +1,13 @@
 Lab 2.4: Security workflows
 ---------------------------
-Connect as **larry** with password of **larry**
+Login to BIG-IQ as **larry** with password of **larry**
 
 Check the Firewall policy.
 
-Go to Monitoring > REPORTS > Security > Network Security > Rule statistics and select
-*vs_site18.example.com_https* SEA-vBIGIP01.termmarc.com
+Navigate to **Monitoring** >> **REPORTS** >> **Security** >> **Network Security** >> **Rule Statistics** and select
+**vs_site18.example.com_https**
+
+Review Hit Count
 
 .. image:: ../pictures/module2/img_module2_lab4_1.png
   :align: center
@@ -15,9 +17,9 @@ Go to Monitoring > REPORTS > Security > Network Security > Rule statistics and s
 
 Check the Web Application Security for ``f5-asm-policy1`` ASM Policy.
 
-Go to Configuration > SECURITY > Web Application Security > Policies
+Go to **Configuration** >> **SECURITY** >> **Web Application Security** >> **Policies**
 
-Click on Suggestions, then **Accept** the Learning.
+Click on that policy and then click on Suggestions, then **Accept** the all of the learning suggestions.
 
 .. image:: ../pictures/module2/img_module2_lab4_3.png
   :align: center
@@ -27,7 +29,9 @@ Click on Suggestions, then **Accept** the Learning.
 
 Still logged in as Larry, go to Deployment > EVALUATE & DEPLOY > Web Application Security
 
-Under Deployments, click on **Create**. Name your Deployment, select SEA-vBIGIP01.termmarc.com, choose method **Deploy immediately**, then click on **Create**.
+Under Deployments, click on **Create**. Name your Deployment, select SEA-vBIGIP01.termmarc.com, choose method **Deploy immediately**, then click on **Deploy**.
+
+Ignore warning about deployment and click **Deploy**
 
 .. image:: ../pictures/module2/img_module2_lab4_3b.png
   :align: center
@@ -37,7 +41,7 @@ Under Deployments, click on **Create**. Name your Deployment, select SEA-vBIGIP0
 
 Go back to Configuration > SECURITY > Web Application Security > Policies
 
-Update the Enforcement Mode to ``Blocking``.
+Update the Enforcement Mode to ``Blocking`` on the policy you created.
 
 .. image:: ../pictures/module2/img_module2_lab4_4.png
   :align: center
@@ -63,15 +67,11 @@ Enforce the policy APPLICATION SERVICES > Security > CONFIGURATION tab > click o
 
 |
 
-.. note:: The Enforcement Mode is controlled by the Application owner, the Host Name of the application (FQDN) will be configured in the ASM Policy to enforce it (or not)
+**Let's generate some bad traffic**
 
-.. image:: ../pictures/module2/img_module2_lab4_6a.png
-  :align: center
-  :scale: 50%
+Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **default**
 
-|
-
-Let's generate some bad traffic, connect on the *Ubuntu Lamp Server* server and launch the following script:
+Execute the following script:
 
 ``# /home/f5/scripts/generate_bad_traffic.sh``
 

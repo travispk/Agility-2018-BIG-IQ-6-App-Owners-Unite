@@ -1,6 +1,6 @@
 Lab 1: Creation of each persona in BIG-IQ
 -----------------------------------------
-.. note:: Marco, Paula, Paul and Larry are already created in the blueprint,so only the **david** user needs to be created.
+.. note:: Users accouts for Marco, Paula, Paul and Larry are already created in this lab, only the **david** user needs to be created.
 
 We will be using 4 main personas for this lab:
 
@@ -11,8 +11,7 @@ We will be using 4 main personas for this lab:
 5. **David**: Super-NetOps
 
 **Marco** will have full access to BIG-IQ. He knows a lot about F5 products (BIG-IQ/BIG-IP).
-He will provide the access to David, Larry and Paula. He will also manage the Service Scaling Group (SSG)
-and application templates.
+He will provide the access to David, Larry and Paula. He will also manage the application templates.
 
 **Larry** will manage the Web Application Firewall (WAF) policies. He will work with Paula's team
 to define the necessary security policies for each applications.
@@ -27,10 +26,13 @@ Ensuring that the app fits within the rest of the organization’s app portfolio
 Automate common network patterns that the other teams can consume.
 Automate existing environment management and troubleshooting tasks.
 
-Connect to your BIG-IQ as **admin/admin** and go to : *System* > *Users Management* > *Users*
-and verify each user & role below and change where needed.
+``****TASKS****``
 
-**1. Marco: Full Administrator**
+#. Connect to your **BIG-IQ (Named: BIG-IQ CM1)** as Username: **admin** and Password: **admin**
+#. Go to : **System** > **Users Management** > **Users**
+#. Verify each user & role below.
+
+**Marco: Full Administrator**
 
 - *Auth Provider* = Radius
 - *User Name* = marco
@@ -38,7 +40,7 @@ and verify each user & role below and change where needed.
 - (*Password stored in Radius server* = marco)
 - *Role* = Administrator Role
 
-**2. Larry: Application Security Manager**
+**Larry: Application Security Manager**
 
 - *Auth Provider* = Radius
 - *User Name* = larry
@@ -46,7 +48,7 @@ and verify each user & role below and change where needed.
 - (*Password stored in Radius server* = larry)
 - *Role* = Security Manager
 
-**3. Paula: Application Manager VMware**
+**Paula: Application Manager VMware**
 
 - *Auth Provider* = Radius
 - *User Name* = paula
@@ -54,7 +56,7 @@ and verify each user & role below and change where needed.
 - (*Password stored in Radius server* = paula)
 - *Role* = Application Creator VMware (custom role with ALL default templates except AWS)
 
-**4. Paul: Application Manager AWS**
+**Paul: Application Manager AWS**
 
 - *Auth Provider* = Radius
 - *User Name* = paul
@@ -62,9 +64,13 @@ and verify each user & role below and change where needed.
 - (*Password stored in Radius server* = paul)
 - *Role* = Application Creator AWS (custom role with AWS default templates only)
 
-**5. David: Super-NetOps**
+|
 
-Click on *Add*
+**David: Super-NetOps**
+
+``****TASKS****``
+
+4. Click on **Add***
 
 - *Auth Provider* = local
 - *User Name* = david
@@ -72,9 +78,9 @@ Click on *Add*
 - *Password* = david
 - *Role* = Application Creator VMware (custom role with ALL default templates)
 
-Click on *Save & Close*`
+5. Be sure to move *Role* **Application Creator VMware** to the right **selected** box
 
-.. warning:: Only local users are supported to execute Ansible playbook
+6. Click on **Save & Close**
 
 .. image:: ../pictures/module1/img_module1_lab2_1.png
   :align: center

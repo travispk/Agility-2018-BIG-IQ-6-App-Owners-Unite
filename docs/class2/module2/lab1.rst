@@ -1,6 +1,6 @@
 Lab 2.1: Troubleshooting 404
 ----------------------------
-Connect as **paul** with the password of **paul**
+Logout and login to BIG-IQ as **paul** with the password of **paul**
 
 Select one of the applications ``site40.example.com`` and turn on **Enhanced Analytics**, click on the button at the top right of the screen, and click on **Start**.
 
@@ -21,11 +21,19 @@ Expand the right-edge of the analytics pane to get the response code filter. Not
 
 |
 
-Let's generate some 404 error, connect on the *Ubuntu Lamp Server* server and launch the following command:
+**Generate 404 errors on the web application**
 
-``# for i in {1..10}; do curl -k -s -m 4 -o /dev/null -w '404demo.php\tstatus: %{http_code}\tbytes: %{size_download}\ttime: %{time_total}\n' https://site40.example.com/404demo.php; done``
+Using the IP from the Training Portal, SSH into the **Ubuntu Lamp Server** server with username **root** and password **default**
 
-After few seconds, the 10 404 errors are showing on the chart.
+Execute this command::
+
+    curl -k -i https://site40.example.com/404demo.php
+
+Push the up arrow and enter to repeat the command around 10 times.
+
+After about 30 seconds or so (default refresh time on that page) the 404 errors should appear on the **Response Codes** chart and pane.
+
+We have seen in this lab on rare cases updates not working.  Click back out of the site in BIG-IQ and then back into site40.
 
 .. image:: ../pictures/module2/img_module2_lab1_3.png
   :align: center
@@ -38,3 +46,7 @@ Filter on 404 errors on right panel, this should give you only the URL that is m
 .. image:: ../pictures/module2/img_module2_lab1_4.png
   :align: center
   :scale: 50%
+
+|
+
+You could then take action on that pool members with the missing data by disabling it in the pool until that server is fixed.

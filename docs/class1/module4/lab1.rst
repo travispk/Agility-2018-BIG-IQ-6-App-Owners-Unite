@@ -14,7 +14,9 @@ When you define the application, you can omit or include these objects. Paramete
 as not visible are included using the default values specified in the application template.
 This allows you to maintain a consistent environment. Parameters that you define as editable are visible and can be revised.
 
-Connect as **marco** with password of **marco**. Create a Custom Service Template, go to *Applications* > *SERVICE CATALOG*, click on *Create*.
+``****TASKS****``
+
+Connect to BIG-IQ as **marco** with password of **marco**. Create a Custom Service Template, go to **Applications** >> **SERVICE CATALOG**, click on **Create**.
 
 In the Name field, type in a name for the application template you are creating.
 In the Description field (optional), type in a brief description for the application template you are creating to help identify it when you want to use it later.
@@ -28,7 +30,7 @@ In the Description field (optional), type in a brief description for the applica
 
 |
 
-Save the template, click *Save*
+Save the template, click **Save**
 
 Now, define the default objects for this template.
 You can either create these objects manually, or you can import objects that already exist on this BIG-IQ.
@@ -55,6 +57,8 @@ Create your nodes with the following parameters:
 
 |
 
+Click **Save & Close** (bottom right)
+
 Repeat the same with the 2nd node:
 
 - Prompt: ``Server``
@@ -67,11 +71,9 @@ Repeat the same with the 2nd node:
 
 |
 
-If you want applications created with this template to be able to include more than one copy of the object you are adding, select Enabled for Allow Multiple Instances.
+If you want applications created with this template to be able to include more than one copy of the object you are adding, select Enabled for Allow Multiple Instances as you just did.
 
-Save the template, click *Save*
-
-To add a default pool, you would expand Local Traffic, and then click Pools.
+Add a default pool, you would expand Local Traffic, and then click Pools.
 Click *Create*. The screen you use to define the selected object type (for example New Pool) displays.
 
 .. image:: ../pictures/module4/img_module4_lab1_5.png
@@ -92,7 +94,9 @@ Create your pool with the following parameters:
 
 |
 
-Save the template, click *Save*
+Save the template, click **Save*** (not **Save & Close**)
+
+Resources should now display, Click **New Member**
 
 Add the nodes previously created to the pool template:
 
@@ -107,6 +111,10 @@ Node 1:
 - Note Type: ``Existing Node``
 - Node: ``# /f5-HTTP-lb-custom-template_10.1.20.116``
 - Port: ``80``
+
+Click **Save & Close** (bottom right)
+
+Click **New Member**
 
 Node 2:
 
@@ -128,7 +136,9 @@ Once both nodes are added to the Pool template, you should see both nodes attach
 
 |
 
-Save the template, click *Save & Close*
+Click **Save & Close** (bottom right)
+
+Click the back arrow next to the breadcrumbs by ``... / ... / ... /f5-HTTP-lb-custom-template`` to back to the template settings.
 
 To add a default virtual server, you would expand Local Traffic, and then click Virtual Servers.
 Click *Create*. The screen you use to define the selected object type (for example New Virtual Server) displays.
@@ -150,7 +160,6 @@ Create your virtual server with the following parameters:
 - Name Virtual Server: ``vs_site16.example.com``
 - Source Address: ``0.0.0.0/0``
 - Destination Address: ``10.1.10.116``
-- Destination Network Mask: ``255.255.255.255``
 - Service Port: ``80``
 - Protocol Profile (Client): ``/Common/f5-tcp-wan``
 - Protocol Profile (Server): ``/Common/f5-tcp-lan``
@@ -159,8 +168,6 @@ Create your virtual server with the following parameters:
 - Default Pool: ``# /Common/f5-HTTP-lb-custom-template_MyPool``
 
 .. note:: Do not apply the default ASM Policy.
-
-.. warning:: If the Application is created on AWS, Destination Address and Network Mask needs to be set to 0.0.0.0
 
 .. image:: ../pictures/module4/img_module4_lab1_11.png
   :align: center
@@ -178,8 +185,9 @@ For parameters that you want to allow to be changed, select Editable.
 Other parameters will be present (with the settings that you specify here), but they will not be visible in the user interface.
 
 Only the parameters you select will appear in the user interface when someone deploys an application using this template.
-As you specify parameter values for this template object, you can click *Preview* in the upper
-right corner to see what the user interface will look like when someone uses this template to deploy an application.
+As you specify parameter values for this template object.
+
+Click **Preview** in the upper right corner to see what the user interface will look like when someone uses this template to deploy an application.
 
 .. image:: ../pictures/module4/img_module4_lab1_12.png
   :align: center
@@ -187,9 +195,11 @@ right corner to see what the user interface will look like when someone uses thi
 
 |
 
-9. Save the template, click *Save & Close*
+Save the template, click **Save & Close**
 
-Your custom template is now showing in the Service Catalog.
+When asked to apply the default ASM Policy.  Click **No**
+
+Your custom template is now showing in the Service Catalog.  Woot!
 
 .. image:: ../pictures/module4/img_module4_lab1_13.png
   :align: center
@@ -197,11 +207,7 @@ Your custom template is now showing in the Service Catalog.
 
 |
 
-When you finish specifying parameters for this object, click Save & Close.
-BIG-IQ adds the object you defined to the list of objects in this template.
-When you finish adding an object to a template, you can use it to create an application.
-
-In order to allow Paula to use the custom application template, go to : *System* > *Role Management* > *Roles*
+In order to allow **Paula** to use the custom application template, go to : *System* > *Role Management* > *Roles*
 and select *CUSTOM ROLES* > *Application Roles* > *Application Creator VMware* role (already assigned to Paula). Select the Template *f5-HTTP-lb-custom-template*, drag it to the right.
 
 .. image::  ../pictures/module4/img_module4_lab1_14.png
@@ -210,4 +216,4 @@ and select *CUSTOM ROLES* > *Application Roles* > *Application Creator VMware* r
 
 |
 
-Click on *Save & Close*
+Click on **Save & Close**

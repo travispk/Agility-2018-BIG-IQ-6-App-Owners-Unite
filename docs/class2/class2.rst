@@ -1,45 +1,29 @@
 Class 2:  BIG-IQ Analytics
 ==========================
 
-.. note:: On this page there is no actions to be done here regarding the lab itself
+In this class, we will review the various analytics available for the applications in BIG-IQ 6.0.
 
-In this class, we will review the various analytics available for the applications and Service Scaling Group objects in BIG-IQ 6.0.
+A **data collection device (DCD)** is a specially provisioned BIG-IQ system that you use to manage and store alerts,
+events, and statistical data from one or more BIG-IP systems.
 
-- **vLab Test Web Site 36:** *(used in module 2)*
+Configuration tasks on the BIG-IP system determine when and how alerts or events are triggered on the client. The
+alerts or events are sent to a BIG-IQ data collection device, and the BIG-IQ system retrieves them for your analysis.
+When you opt to collect statistical data from the BIG-IP devices, the DCD periodically (at an interval that you
+configure) retrieves those statistics from your devices, and then processes and stores that data.
 
-==================  ============ ======== ============================ =======
-Test Website         VIP         Ports    Servers                      Ports
-==================  ============ ======== ============================ =======
-site36.example.com   10.1.10.136 443/80   10.1.20.136 and 10.1.20.137  80/8081
-==================  ============ ======== ============================ =======
+.. image:: pictures/img_intro_1.png
+  :align: center
+  :scale: 50%
 
-- **vLab Test Web Site 38:**
+|
 
-==================  ============ ======== ============================ =======
-Test Website         VIP         Ports    Servers                      Ports
-==================  ============ ======== ============================ =======
-site38.example.com   10.1.10.138 443/80   10.1.20.138 and 10.1.20.139  80/8081
-==================  ============ ======== ============================ =======
+With BIG-IP Cloud Edition starting release 13.1.0.5 and above, the Analytics are being pushed from the BIG-IP to the DCDs.
+Therefore, the communication between the BIG-IP and DCD needs to be bi-directional (e.g. if your BIG-IQ/DCD are on premises
+the BIG-IP VE are in the public cloud such as AWS or Azure, you will need a VPN between your data center and your public cloud network).
 
-- **vLab Test Web Site 40:** *(used in module 2)*
-
-==================  ============ ======== ============================ =======
-Test Website         VIP         Ports    Servers                      Ports
-==================  ============ ======== ============================ =======
-site40.example.com   10.1.10.140 443/80   10.1.20.140 and 10.1.20.141  80/8081
-==================  ============ ======== ============================ =======
-
-- **vLab Test Web Site 42:** *(used in module 2)*
-
-==================  ============ ======== ============================ =======
-Test Website         VIP         Port     Server                       Ports
-==================  ============ ======== ============================ =======
-site42.example.com   10.1.10.142 80       10.1.20.142                  80/8081
-==================  ============ ======== ============================ =======
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   intro
    module*/module*
