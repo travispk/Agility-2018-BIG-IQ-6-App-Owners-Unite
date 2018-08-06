@@ -15,7 +15,7 @@ Type in a Name for the application you are creating.
 
 To help identify this application when you want to use it later, in the Description field, type in a brief description for the application you are creating.
 
-- Description: ``My First Application on F5 Cloud Edition``
+- Description: ``My First Application``
 
 Type  the domain of your application
 

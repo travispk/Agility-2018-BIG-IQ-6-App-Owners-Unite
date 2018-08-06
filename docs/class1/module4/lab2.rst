@@ -11,7 +11,7 @@ Type in a Name for the application you are creating.
 
 To help identify this application when you want to use it later, in the Description field, type in a brief description for the application you are creating.
 
-- Description: ``My Second Application on F5 Cloud Edition``
+- Description: ``My Second Application``
 
 For Device, select the name of the device you want to deploy this application to. (if the HTTP statistics are not enabled, they can be enabled later on after the application is deployed)
 
