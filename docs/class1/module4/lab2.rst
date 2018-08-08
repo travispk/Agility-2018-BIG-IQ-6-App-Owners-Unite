@@ -25,3 +25,5 @@ Watch your application configuration deploy to the BIG-IP from the BIG-IQ Applic
 This can take a few minutes.
 
 You can also login to the BIG-IP (SEA-vBIGIP01) as **admin** with password **agility** to review the configuration deployed.
+
+**You have reached the end of Class 1.**

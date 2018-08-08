@@ -53,6 +53,12 @@ Click on the **HEALTH** icon to view, or edit, the application health alert rule
   :align: center
   :scale: 50%
 
+|
+
+Click **Cancel** Button (bottom right)
+
+|
+
 The application configuration map directly below the summary bar provides information about your application's properties, client types,
 network and device configuration, F5 application services, and server configuration. You can click the icons to display detailed information in the ANALYTICS and CONFIGURATION areas.
 
@@ -61,8 +67,6 @@ network and device configuration, F5 application services, and server configurat
   :scale: 50%
 
 |
-
-Click **Cancel** Button (bottom right)
 
 **Analytics Tab**
 
@@ -111,3 +115,7 @@ See a poor performing pool member?  Let your app owners have control to mark it 
 .. image:: ../pictures/module1/img_module1_lab1_8.png
   :align: center
   :scale: 50%
+
+|
+
+Click on the various circles in the application dashboard.  Such as **APPLICATION**, **CLIENT**, **ENVIRONMENT**, **APPLICATION SERVICES**, and **SERVERS** to review the various analytics and configurations available to administrators and application owners.

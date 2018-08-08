@@ -10,4 +10,3 @@ Execute the playbook::
     # ansible-playbook -i notahost, delete_http_app.yaml -vvvv
 
 Connect as **david** (select Auth Provider local) and check on BIG-IQ the application (site22.example.com) has been deleted.
-

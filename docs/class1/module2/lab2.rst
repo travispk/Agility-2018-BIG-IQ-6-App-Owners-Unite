@@ -33,6 +33,8 @@ Lab 2.2: Create custom security policies & Application Service Template
 #. Click **Save & Close** button (bottom right corner)
 
 .. warning:: Ignore the unauthorized / denied error when saving the policy.
+    
+    This is a known bug and will be resolved in the next BIG-IQ release.
 
 .. image:: ../pictures/module2/img_module2_lab2_4b.png
   :align: center

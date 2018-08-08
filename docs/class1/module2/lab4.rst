@@ -27,11 +27,13 @@ Click on that policy and then click on Suggestions, then **Accept** the all of t
 
 |
 
-Still logged in as Larry, go to Deployment > EVALUATE & DEPLOY > Web Application Security
-
-Under Deployments, click on **Create**. Name your Deployment, select SEA-vBIGIP01.termmarc.com, choose method **Deploy immediately**, then click on **Deploy**.
-
-Ignore warning about deployment and click **Deploy**
+#. Confirm you are logged in as **Larry**
+#. Go to **Deployment** >> **EVALUATE & DEPLOY** >> **Web Application Security**
+#. Under **Deployments**, click on **Create**
+#. Name it **seattleasm**
+#. On **Method** select **Deploy immediately**
+#. Select **SEA-vBIGIP01.termmarc.com** (move to right box)
+#. Click **Deploy** button (ignore warning message)
 
 .. image:: ../pictures/module2/img_module2_lab4_3b.png
   :align: center
@@ -39,9 +41,9 @@ Ignore warning about deployment and click **Deploy**
 
 |
 
-Go back to Configuration > SECURITY > Web Application Security > Policies
-
-Update the Enforcement Mode to ``Blocking`` on the policy you created.
+#. Go back to **Configuration** >> **SECURITY** >> **Web Application Security** >> Policies
+#. Update the **Enforcement Mode** to ``Blocking`` on the policy you created
+#. Click **Save & Close** (bottom right)
 
 .. image:: ../pictures/module2/img_module2_lab4_4.png
   :align: center
@@ -75,13 +77,13 @@ Execute the following script:
 
 ``# /home/f5/scripts/generate_bad_traffic.sh``
 
-In the Application Dashboard, navigate to the Security Statistics and notice the Malicious Transactions.
+Now back on BIG-IQ, click on **ANALYTICS** in the **Application Services** - **Security** (to the left of the **CONFIGURATION** tab you are in) and notice the malicious transactions.
 
-Connect as **larry** with password of **larry**
+Logout of BIG-IQ and login as **larry** with password of **larry**
 
-Check ASM type of attacks
+**Check ASM type of attacks**
 
-Monitoring > EVENTS > Web Application Security > Event Logs > Events
+**Monitoring** >> **EVENTS** >> **Web Application Security** >> **Event Logs** >> **Events**
 
 .. image:: ../pictures/module2/img_module2_lab4_7.png
   :align: center

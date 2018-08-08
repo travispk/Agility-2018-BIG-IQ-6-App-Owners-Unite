@@ -14,8 +14,8 @@ They can be used to deploy various type of applications. These default templates
 
 ``****TASKS****``
 
-#. Logout of **BIG-IQ** (top right corner)
-#. Login as **marco** with the password of **marco**
+#. In BIG-IQ, confirm you are logged in as **marco** (top right corner)
+#. If not, login as **marco** with the password of **marco**
 #. Go to **Applications** >> **SERVICE CATALOG**
 #. Look through the different default templates.
 

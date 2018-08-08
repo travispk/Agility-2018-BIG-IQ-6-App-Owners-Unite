@@ -69,7 +69,7 @@ The Application configuration will then deploy to the BIG-IP.  This will take a 
 
 |
 
-.. note:: In case the Application fails, connect as **Marco** and go to **Applications** >> **Application Deployments** to have more details on the failure. You try retry in case of failure.
+.. note:: In case the Application fails, connect as **Marco** and go to **Applications** >> **Application Deployments** to have more details on the failure. You can retry the deployment in the event of a failure.
 
 In Paula's Dashboard, she can see her Application.
 
@@ -111,4 +111,6 @@ Paula can update Application Health Alert Rules by clicking on the Health Icon o
 
 |
 
-**Optional:** Login to the BIG-IP (SEA-vBIGIP01) with username: **admin** and password: **agility** and view the Virtual Servers you just deployed using an application template.
+Login to the BIG-IP (SEA-vBIGIP01) with username: **admin** and password: **agility** and view the Virtual Servers you just deployed using an application template.
+
+.. note:: **Take a 5 to 10 minute break as we wait for analytics to build for this deployment to be reviewed in the next lab**
