@@ -27,7 +27,8 @@ Lab 2.2: Create custom security policies & Application Service Template
 
 |
 
-7. While still editing the policy **f5-asm-policy1**, navigate to **POLICY BUILDING** >> **Settings**
+7. Click **Save** Button (bottom right) 
+#. While still editing the policy **f5-asm-policy1**, navigate to **POLICY BUILDING** >> **Settings**
 #. Change **Learning Mode** to **Manual**
 #. Change **Policy Building Mode** to **Central**
 #. Click **Save & Close** button (bottom right corner)
@@ -89,7 +90,7 @@ Lab 2.2: Create custom security policies & Application Service Template
 #. Login as **marco** with password of **marco**
 #. Navigate to **Applications** >> **SERVICE CATALOG**
 #. Select **Default-f5-HTTPS-WAF-lb-template**
-#. Click the **Clone** button
+#. Click the **Clone** button (top right)
 #. Enter the name of your cloned template as **f5-HTTPS-WAF-lb-template-custom1**
 #. Click **Clone** button
 
@@ -100,10 +101,10 @@ Lab 2.2: Create custom security policies & Application Service Template
 |
 
 8. While editing the template, navigate to **SECURITY POLICIES**
-#. Under Attached ASM Policy, select **asm-policy_1** for both Virtual Servers in this template
+#. Under Attached ASM Policy, select **asm-policy1** for both Virtual Servers in this template
 #. Under Enforce Firewall Policy, seelect **f5-afm-policy1** for both Virtual Servers in this template
-#. Look around in this template (left navigation) at the Virtual Servers and Pools this template is configured to create for new apps.
-#. Click **Save & Close** button (bottom right corner)
+#. Click **Save** buttom (bottom right)
+#. Navigate around in this template (left navigation) and review the Virtual Servers and Pools this template is configured to create for new apps.
 
 .. image:: ../pictures/module2/img_module2_lab2_8.png
   :align: center
