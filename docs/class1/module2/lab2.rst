@@ -101,7 +101,7 @@ Lab 2.2: Create custom security policies & Application Service Template
 |
 
 8. While editing the template, navigate to **SECURITY POLICIES**
-#. Under Attached ASM Policy, select **asm-policy1** for both Virtual Servers in this template
+#. Under Attached ASM Policy, select **f5-asm-policy1** for both Virtual Servers in this template
 #. Under Enforce Firewall Policy, seelect **f5-afm-policy1** for both Virtual Servers in this template
 #. Click **Save** buttom (bottom right)
 #. Navigate around in this template (left navigation) and review the Virtual Servers and Pools this template is configured to create for new apps.
